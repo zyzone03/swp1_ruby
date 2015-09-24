@@ -31,13 +31,13 @@ phonebook.each_with_index do |x, i|
     # puts phonebook["#{i}"]
 end
 
-print "Do you want to delete anyone?(y/n)? "
+print "Do you want to delete anyone?(y/n)? " # 삭제 기능 추가
 answer = gets.chomp
 if answer == 'y'
     print "What is his(her) name? "
     del_name = gets.chomp
     # del_name = del_name.to_sym
-    phonebook.each_with_index do |x, i|
+    phonebook.each_with_index do |x, i| # 해당 hash 제거
         if phonebook[i][:name] == del_name
             phonebook.delete_at(i)
         end
